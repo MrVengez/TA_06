@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejercicio 2</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/estilosSuma.css">
+</head>
+<body>
+<div class="container">
+    <h1>Ingresa los nombres</h1>
+    <form action="/ejercicio2" method="POST">
+            <label for="nombre1">Nombre 1:</label>
+        <input type="text" id="nombre1" name="nombre1" required>
+        <br>
+        <label for="nombre2">Nombre 2:</label>
+        <input type="text" id="nombre2" name="nombre2" required>
+        <br>
+        <label for="nombre3">Nombre 3:</label>
+        <input type="text" id="nombre3" name="nombre3" required>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+        {% if resultado %}
+            <div class="resultado">
+                <p>{{ resultado }}</p>
+            </div>
+        {% endif %}
+    </div>
+</div>
+</body>
+</html>
